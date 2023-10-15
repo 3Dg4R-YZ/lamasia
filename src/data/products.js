@@ -385,7 +385,7 @@ export const products = [
           price: "100",
         },
         {
-          name: "Barra (HERSHEY´S) de Chocolate Blanco",
+          name: "Barra (HERSHEY'S) de Chocolate Blanco",
           price: "250",
         },
         {

@@ -1,17 +1,29 @@
 import React from "react";
 
-export const NewProductForm = ({ actualIndex }) => {
+export const EditProductForm = ({ product, i, image, actualIndex }) => {
+  const { name, description, price } = product;
   return (
     <>
       <input type="hidden" name="category" value="Picaderas" />
       <input type="hidden" name="sub_category" value="almuerzos" />
       <label>
         Nombre *
-        <input type="text" name="name" autoComplete="off" required={true} />
+        <input
+          type="text"
+          name="name"
+          autoComplete="off"
+          required={true}
+          defaultValue={name}
+        />
       </label>
       <label>
         Descripcion
-        <textarea name="description" autoComplete="off" rows={3} />
+        <textarea
+          name="description"
+          autoComplete="off"
+          rows={3}
+          defaultValue={description}
+        />
       </label>
       <label className="number">
         Indice *
@@ -19,7 +31,7 @@ export const NewProductForm = ({ actualIndex }) => {
           type="number"
           min={1}
           max={actualIndex}
-          defaultValue={actualIndex}
+          defaultValue={i + 1}
           name="local_index"
           autoComplete="off"
           required={true}
@@ -33,6 +45,7 @@ export const NewProductForm = ({ actualIndex }) => {
           name="price"
           autoComplete="off"
           required={true}
+          defaultValue={price}
         />
       </label>
 

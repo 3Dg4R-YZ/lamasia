@@ -3,9 +3,8 @@ export const authReducer = (state = false, action) => {
     case "close":
       return null;
 
-    case "openForm":
-      return action.payload;
-
+    case "openModal":
+      return { title: action.title, content: action.payload };
     default:
       return state;
   }

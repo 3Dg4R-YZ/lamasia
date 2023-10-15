@@ -11,17 +11,17 @@ export const Modal = () => {
         onClick={() => dispatch({ type: "close" })}
       ></button>
       <div className="modal fadeInDown">
-        <button
-          className="closeModal"
-          onClick={() => dispatch({ type: "close" })}
-        >
-          X
-        </button>
-        <div className="preview"></div>
+        {/* <div className="preview"></div> */}
         <div className="newForm">
-          <h2 className="newProductForm__title">Nuevo Producto</h2>
+          <button
+            className="closeModal"
+            onClick={() => dispatch({ type: "close" })}
+          >
+            X
+          </button>
+          <h3 className="newProductForm__title">{isOpen.title}</h3>
           <form action={`${direccion}/products/create`} method="post">
-            {isOpen}
+            {isOpen.content}
           </form>
         </div>
       </div>

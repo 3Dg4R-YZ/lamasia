@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useMemo } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { products } from "../data/products";
 import { Category } from "./Category";
@@ -8,18 +8,23 @@ import { PlusLogo } from "../assets/PlusLogo";
 export const Main = ({ main }) => {
   const { admin, dispatch } = useContext(AuthContext);
   const categories = products[main];
-
+  const categoriesMemo = useMemo(
+    () =>
+      categories.map((category, i) => (
+        <Category category={category} i={i} key={Math.random()} />
+      )),
+    [categories]
+  );
   return (
     <>
-      {categories.map((category, i) => (
-        <Category category={category} i={i} key={Math.random()} />
-      ))}
+      {categoriesMemo}
       {admin && (
         <section
           className="newSection"
           onClick={() => {
             dispatch({
-              type: "openForm",
+              type: "openModal",
+              title: "Nueva Categoria",
               payload: <NewCategoryForm />,
             });
           }}
