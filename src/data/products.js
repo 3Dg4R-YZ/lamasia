@@ -198,219 +198,265 @@ export const products = [
   [
     {
       section: "Picaderas",
+      id: 1,
       products: [
         {
           name: "El Clásico",
           description: "Pequeños dados de Jamón y queso",
           price: "300",
+          id: 1,
         },
         {
           name: "The Champions",
           description: "Pequeños dados de Jamón y queso y chorizo",
           price: "400",
+          id: 2,
         },
         {
           name: "CR7",
           description:
             "Contiene Jamón, Queso, Chorizo, Snack Pringles o Pellys, salsa Ketchup y Mostaza",
           price: "650",
+          id: 3,
         },
         {
           name: "Leo Messi",
           description:
             "Contiene Jamón, Queso, Chorizo, Snack Pringles o Pellys, papas fritas, Ketchup y Mostaza",
           price: "1000",
+          id: 4,
         },
         {
           name: "El Mundial",
           description:
             "Contiene Jamón, Queso, Chorizo, aceitunas, bolitas de carne, Snack Pringles o Pellys, Papas Fritas y salsa Ketchup y Mostaza",
           price: "1500",
+          id: 5,
         },
         {
           name: "Mini Coctel de aceitunas y queso gouda",
           description: "",
           price: "500",
+          id: 6,
         },
       ],
     },
     {
       section: "Hamburguesas",
+      id: 2,
       products: [
         {
           name: "Hamburguesa simple a la plancha",
           description: "",
           price: "250",
+          id: 1,
         },
         {
           name: "Pan con Hamburguesa Simple",
           description: "",
           price: "320",
+          id: 2,
         },
         {
           name: "Pan con Hamburguesa Simple con Queso",
           description: "",
           price: "400",
+          id: 3,
         },
         {
           name: "Pan con Hamburguesa simple con Jamón y Queso",
           description: "",
           price: "450",
+          id: 4,
         },
         {
           name: "Pan con Hamburguesa simple con Jamón, Queso y Chorizo",
           description: "",
           price: "500",
+          id: 5,
         },
         {
           name: "Pan con Hamburguesa Doble",
           description: "",
           price: "500",
+          id: 6,
         },
         {
           name: "Pan con Hamburguesa Doble con queso",
           description: "",
           price: "550",
+          id: 7,
         },
         {
           name: "Pan con Hamburguesa Doble con Jamón y Queso",
           description: "",
           price: "600",
+          id: 8,
         },
         {
           name: "Pan con Hamburguesa Doble con Jamón, Queso y Chorizo",
           description: "",
           price: "650",
+          id: 9,
         },
         {
           name: "SUPER Hamburguesa La Masia",
           description:
             "Pan con Doble Hamburguesa que contiene Doble Jamón, Doble Chorizo, Doble Queso Gouda, Aceitunas, Salsas Ketchup y Mostaza, con agrego Snack",
           price: "1000",
+          id: 10,
         },
         {
           name: "Snacks Pelly de jamón",
           description: "",
           price: "150",
+          id: 11,
         },
         {
           name: "Papas fritas",
           description: "Crujientes papas fritas acompañadas de ketchup.",
           price: "400",
+          id: 12,
         },
         {
           name: "Bocadito de Jamón",
           description: "",
           price: "100",
+          id: 13,
         },
         {
           name: "Bocadito de Queso",
           description: "",
           price: "100",
+          id: 14,
         },
         {
           name: "Bocadito de Chorizo",
           description: "",
           price: "100",
+          id: 15,
         },
         {
           name: "Bocadito de Jamón y Queso",
           description: "",
           price: "150",
+          id: 16,
         },
         {
           name: "Bocadito de Chorizo y Queso",
           description: "",
           price: "150",
+          id: 17,
         },
         {
           name: "Bocadito de Jamón / Chorizo/ Queso",
           description: "",
           price: "200",
+          id: 18,
         },
         {
           name: "Bocadito de Salchichas",
           description: "",
           price: "180",
+          id: 19,
         },
         {
           name: "Hot Dog",
           description: "Delicioso Perro Caliente acompañado ketchup y mostaza",
           price: "350",
+          id: 20,
         },
         {
           name: "Croquetas de La Casa",
           description: "Acompañadas con Salsa Ketchup",
           price: "350",
+          id: 21,
         },
       ],
     },
     {
       section: "Agregos",
+      id: 3,
       products: [
         {
           name: "M&M Bolitas confitadas de colores rellenas con chocolate",
           price: "100",
+          id: 1,
         },
         {
           name: "Galletas dulces con crema",
           price: "50",
+          id: 2,
         },
         {
           name: "Chips de galletas",
           price: "50",
+          id: 3,
         },
         {
           name: "Sorbetos",
           price: "70",
+          id: 4,
         },
         {
           name: "Barra de cereal cubierta con chocolate y rellena con vainilla",
           price: "150",
+          id: 5,
         },
         {
           name: "Crema de Maní",
           price: "100",
+          id: 6,
         },
         {
           name: "Galleta con Nutela",
           price: "60",
+          id: 7,
         },
         {
           name: "Leche Condensada",
           price: "100",
+          id: 8,
         },
         {
           name: "Crema de Nutela",
           price: "100",
+          id: 9,
         },
         {
           name: "Barra (HERSHEY'S) de Chocolate Blanco",
           price: "250",
+          id: 10,
         },
         {
           name: "Kinder Delice",
           price: "150",
+          id: 11,
         },
         {
           name: "Peter de Chocolate Nestle",
           price: "150",
+          id: 12,
         },
         {
           name: "Mamuts",
           price: "150",
+          id: 13,
         },
         {
           name: "Barquillo de Chocolate relleno con Avellana y Cacahuetes",
           price: "250",
+          id: 14,
         },
         {
           name: "Agrego de Queso GOUDA para Bocaditos y Hamburguesas (60g)",
           price: "150",
+          id: 15,
         },
         {
           name: "Agrego de Ketchup y Mostaza",
           price: "120",
+          id: 16,
         },
       ],
     },
@@ -418,6 +464,7 @@ export const products = [
   [
     {
       section: "Jugos",
+      id: 1,
       products: [
         {
           name: "Jugo de mango de la casa",

@@ -9,8 +9,22 @@ import { DeleteProductForm } from "./admin/DeleteProductForm";
 export const Product = ({ product, clase, i, actualIndex }) => {
   const [info, setInfo] = useState(false);
   const { name, description, price } = product;
-  const image = "placeholder.jpg";
+  const image = i < 7 ? `${i + 1}.jpg` : `placeholder.jpg`;
   const { admin, dispatch } = useContext(AuthContext);
+
+  const editModal = {
+    type: "openModal",
+    title: "Editar Producto",
+    payload: (
+      <EditProductForm
+        product={product}
+        i={i}
+        image={image}
+        actualIndex={actualIndex}
+      />
+    ),
+  };
+
   return (
     <li className={`${clase}s__${clase}`}>
       <img
@@ -34,23 +48,7 @@ export const Product = ({ product, clase, i, actualIndex }) => {
         <>
           <span className="product__index">{i + 1}</span>
           <div className={`${clase}__btns`}>
-            <button
-              className="edit__btn"
-              onClick={() =>
-                dispatch({
-                  type: "openModal",
-                  title: "Editar Producto",
-                  payload: (
-                    <EditProductForm
-                      product={product}
-                      i={i}
-                      image={image}
-                      actualIndex={actualIndex}
-                    />
-                  ),
-                })
-              }
-            >
+            <button className="edit__btn" onClick={() => dispatch(editModal)}>
               <EditarLogo />
             </button>
             <button

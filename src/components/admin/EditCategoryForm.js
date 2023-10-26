@@ -27,7 +27,6 @@ export const EditProductForm = ({ product, i, actualIndex }) => {
           required={true}
         />
       </label>
-      <button>Guardar</button>
     </>
   );
 };

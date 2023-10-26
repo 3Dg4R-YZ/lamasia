@@ -40,7 +40,6 @@ export const NewProductForm = ({ actualIndex }) => {
         Foto
         <input type="file" accept="image/*" />
       </label>
-      <button>Guardar</button>
     </>
   );
 };

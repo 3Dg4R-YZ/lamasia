@@ -2,29 +2,29 @@ import React, { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 
 export const Modal = () => {
-  const { isOpen, dispatch, direccion } = useContext(AuthContext);
+  const { isOpen, dispatch } = useContext(AuthContext);
   if (!isOpen) return null;
+  const { title, content, action, handleSubmit } = isOpen;
   return (
-    <>
+    <div className="modal">
+      {/* <div className="preview"></div> */}
       <button
         className="bckModal"
         onClick={() => dispatch({ type: "close" })}
       ></button>
-      <div className="modal fadeInDown">
-        {/* <div className="preview"></div> */}
-        <div className="newForm">
-          <button
-            className="closeModal"
-            onClick={() => dispatch({ type: "close" })}
-          >
-            X
-          </button>
-          <h3 className="newProductForm__title">{isOpen.title}</h3>
-          <form action={`${direccion}/products/create`} method="post">
-            {isOpen.content}
-          </form>
-        </div>
+      <div className="newForm fadeInDown">
+        <button
+          className="closeModal"
+          onClick={() => dispatch({ type: "close" })}
+        >
+          X
+        </button>
+        <h3 className="newProductForm__title">{title}</h3>
+        <form action={action} method="post" onSubmit={handleSubmit}>
+          {content}
+          <button>Guardar</button>
+        </form>
       </div>
-    </>
+    </div>
   );
 };

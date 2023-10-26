@@ -57,14 +57,17 @@ header>figure {
   padding: 10px;
   border: 2px solid var(--changelg);
   border-radius: 50%;
+  transition: border .5s, border-radius .5s;
 }
 
 .instagram>svg {
   fill: var(--changelg);
+  transition: fill .5s;
 }
 
-.instagram:hover>svg {
-  fill: #020202;
+.instagram:hover {
+  --changelg: #000;
+  border-radius: 20px;
 }
 
 header>h1 {
@@ -294,7 +297,7 @@ section:nth-child(3) {
   width: 90%;
   display: grid;
   gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
 
 }
 
@@ -307,12 +310,14 @@ section:nth-child(3) {
   align-items: center;
   position: relative;
   background: #fff;
-  border: 2px solid var(--changedk);
-  border-radius: 7px 7px 7px 20px;
-  box-shadow: 3px 3px 7px #02020250;
+  border: 3px solid var(--changedk);
+  border-radius: 10px;
+  box-shadow:
+    14px 14px 0px -8px #fff,
+    14px 14px 0px -6px #000;
 }
 
-.products__product::before {
+/* .products__product::before {
   content: "";
   display: block;
   width: 40%;
@@ -326,20 +331,18 @@ section:nth-child(3) {
   border-radius: 7px;
   transform: rotate(-7deg) translateX(-7px);
   animation: rotateMove 10s 4s infinite alternate;
-}
+} */
 
 .product__img {
-  width: 40%;
   height: 100%;
-  border-radius: 5px 0px 0px 20px;
-  clip-path: polygon(0 0, 90% 0, 75% 100%, 0 100%);
-  transition: clip-path .5s;
+  aspect-ratio: 1/1;
   object-fit: cover;
   object-position: center;
-}
-
-.product__img:hover {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  position: relative;
+  top: -15px;
+  left: -15px;
+  border: 2px solid #000;
+  border-radius: 4px;
 }
 
 .product__title,
@@ -381,17 +384,18 @@ form::-webkit-scrollbar-thumb {
 .product__price {
   min-width: 60px;
   position: absolute;
-  bottom: -15px;
-  right: -15px;
+  bottom: -20px;
+  right: -20px;
   padding: 5px;
   font-size: 20px;
+  font-weight: bold;
   text-align: center;
   color: #13D6a8;
-  border: 3px solid #13D6a8;
+  border: 3px solid currentColor;
   background-color: var(--changelg);
-  border-radius: 20px 0px 15px 0px;
-  box-shadow: -2px -2px 10px 1px#02020250;
-  font-weight: bold;
+  border-radius: 18px 0px 12px 0px;
+  box-shadow:
+    -2px -2px 5px 1px #02020250;
 }
 
 .product__btn {
@@ -407,7 +411,7 @@ form::-webkit-scrollbar-thumb {
   border-radius: 0px 5px 0px 0px;
   outline: none;
   cursor: pointer;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%);
+  clip-path: polygon(0 0, 50px 0, 50px 50px);
 }
 
 .product__btn:hover::before {
@@ -425,7 +429,7 @@ form::-webkit-scrollbar-thumb {
   top: 0;
   left: 0;
   z-index: -10;
-  clip-path: polygon(5% 0%, 100% 0%, 100% 95%);
+  clip-path: polygon(3px 0, 50px 0, 50px 47px);
   transition: background .3s;
 }
 
@@ -461,6 +465,7 @@ form::-webkit-scrollbar-thumb {
 .add__img {
   width: 80%;
   aspect-ratio: 1;
+  border: 2px solid #000;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
@@ -480,17 +485,15 @@ form::-webkit-scrollbar-thumb {
   min-width: 60px;
   position: absolute;
   bottom: -15px;
-  right: auto;
-  left: auto;
-  padding: 5px;
+  padding: 5px 7px;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
-  color: #13D688;
+  color: #13D6a8;
   background-color: var(--changelg);
-  border: 3px solid #13D688;
+  border: 3px solid #13D6a8;
   border-radius: 15px 15px 0 0;
-  box-shadow: 0px 0px 10px 3px#02020250;
+  box-shadow: 0px 4px 10px #0008;
 }
 
 .arrow-up {
@@ -633,21 +636,27 @@ form::-webkit-scrollbar-thumb {
   left: -15px;
   background: #fff;
   border: 2px solid #000;
-  border-radius: 5px;
+  border-radius: 3px;
+  opacity: .8;
+  transition: opacity .3s;
+}
+
+.product__index:hover {
+  opacity: 0;
 }
 
 .product__btns {
   position: absolute;
-  bottom: -30px;
-  left: 50%;
+  bottom: -27px;
+  left: 45px;
   transform: translateX(-40%);
   display: flex;
-  gap: 20px;
+  gap: 10px;
 }
 
 .add__btns {
   position: absolute;
-  top: 5px;
+  top: 15px;
   right: -24px;
   display: flex;
   flex-direction: column;
@@ -656,8 +665,8 @@ form::-webkit-scrollbar-thumb {
 
 .edit__btn,
 .delete__btn {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   padding: 2px;
   display: flex;
   align-items: center;
@@ -666,6 +675,7 @@ form::-webkit-scrollbar-thumb {
   border: 2px solid #000;
   border-radius: 5px;
   outline: none;
+  position: relative;
 }
 
 .edit__btn {
@@ -696,12 +706,12 @@ form::-webkit-scrollbar-thumb {
   width: 75%;
   min-height: 90vh;
   display: grid;
+  margin: 0 auto;
   color: #fff;
   position: fixed;
   top: 5vh;
   left: 12.5%;
-  z-index: 1000;
-
+  z-index: 20;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -713,20 +723,20 @@ form::-webkit-scrollbar-thumb {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 15;
+  z-index: 1;
   background-color: #111d;
   cursor: pointer;
 }
 
 .closeModal {
-  padding: 5px 15px 5px 30px;
+  padding: 5px 20px 5px 20px;
   border: 3px solid currentColor;
   border-radius: 10px 0px 0px 10px;
   outline: none;
   position: absolute;
   top: 10px;
   right: -15px;
-  z-index: 1;
+  z-index: 20;
   font-weight: bold;
   font-size: 20px;
   color: #000;
@@ -752,6 +762,7 @@ form::-webkit-scrollbar-thumb {
   border: 3px solid #000;
   gap: 20px;
   place-self: center;
+  z-index: 10;
 }
 
 .newProductForm__title {
@@ -802,7 +813,6 @@ input[required="true"]::after {
   color: firebrick;
 }
 
-input[type="text"] {}
 
 input[type="file"] {
   padding: 0;
@@ -842,11 +852,11 @@ form>p {
   }
 
   40% {
-    transform: scale(1.07) translateX(-4px) translateY(1px);
+    transform: scale(1.09) translateX(-4px) translateY(1px);
   }
 
   60% {
-    transform: scale(1.07) translateX(-7px) translateY(-3px);
+    transform: scale(1.08) translateX(-7px) translateY(-3px);
   }
 
   80% {
@@ -854,7 +864,7 @@ form>p {
   }
 
   100% {
-    transform: scale(1.07) translateX(3px) translateY(1px);
+    transform: scale(1.09) translateX(3px) translateY(1px);
   }
 }
 
@@ -981,12 +991,28 @@ form>p {
     font-size: 14px;
   }
 
+  .adds__add {
+    width: 130px;
+    height: 220px;
+    padding: 5px;
+  }
+
+  .add__price {
+    min-width: 50px;
+    padding: 4px 4px;
+    font-size: 17px;
+  }
+
   .section__title {
-    font-size: 1.8em;
+    font-size: 26px;
   }
 
   .section__title::after {
     height: 3px;
+  }
+
+  .section__adds {
+    width: 88%;
   }
 
   .section__products {
@@ -998,11 +1024,13 @@ form>p {
     height: 110px;
   }
 
-
-
   .newSection__title {
     font-size: 1.5rem;
     padding: 10px 20px;
+  }
+
+  .newProduct__title {
+    font-size: 1.4rem;
   }
 
   .newSection__body {
@@ -1016,5 +1044,16 @@ form>p {
 
   .newForm {
     padding: 10px 15px;
+  }
+
+  .edit__btn,
+  .delete__btn {
+    width: 37px;
+    height: 37px;
+  }
+
+  .product__btns {
+    bottom: -27px;
+    left: 27px;
   }
 }

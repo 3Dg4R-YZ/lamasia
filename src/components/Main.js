@@ -7,7 +7,10 @@ import { PlusLogo } from "../assets/PlusLogo";
 
 export const Main = ({ main }) => {
   const { admin, dispatch } = useContext(AuthContext);
-  const categories = products[main];
+  const data = !!localStorage.getItem("data")
+    ? localStorage.getItem("data")
+    : products;
+  const categories = data[main];
   const categoriesMemo = useMemo(
     () =>
       categories.map((category, i) => (
