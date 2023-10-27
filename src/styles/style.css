@@ -310,11 +310,11 @@ section:nth-child(3) {
   align-items: center;
   position: relative;
   background: #fff;
-  border: 3px solid var(--changedk);
+  border: 2px solid var(--changedk);
   border-radius: 10px;
   box-shadow:
-    14px 14px 0px -8px #fff,
-    14px 14px 0px -6px #000;
+    16px 16px 0px -7px #fff,
+    16px 16px 0px -5px #000;
 }
 
 /* .products__product::before {
@@ -341,6 +341,7 @@ section:nth-child(3) {
   position: relative;
   top: -15px;
   left: -15px;
+  box-sizing: 0px 0px 0px 2px #000;
   border: 2px solid #000;
   border-radius: 4px;
 }
@@ -391,7 +392,7 @@ form::-webkit-scrollbar-thumb {
   font-weight: bold;
   text-align: center;
   color: #13D6a8;
-  border: 3px solid currentColor;
+  border: 2px solid currentColor;
   background-color: var(--changelg);
   border-radius: 18px 0px 12px 0px;
   box-shadow:
@@ -408,7 +409,8 @@ form::-webkit-scrollbar-thumb {
   align-self: flex-start;
   background: var(--changedk);
   border: none;
-  border-radius: 0px 5px 0px 0px;
+  box-shadow: 2px 0px 0px 0px #000;
+  border-radius: 0px 8px 0px 0px;
   outline: none;
   cursor: pointer;
   clip-path: polygon(0 0, 50px 0, 50px 50px);
@@ -424,12 +426,12 @@ form::-webkit-scrollbar-thumb {
   width: 100%;
   height: 100%;
   background: #12abd6;
-  border-radius: 0px 5px 0px 0px;
+  border-radius: 0px 8px 0px 0px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -10;
-  clip-path: polygon(3px 0, 50px 0, 50px 47px);
+  clip-path: polygon(3px 0, 100% 0, 100% 47px);
   transition: background .3s;
 }
 
@@ -445,11 +447,11 @@ form::-webkit-scrollbar-thumb {
   width: 80%;
   display: grid;
   gap: 20px 30px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
 }
 
 .adds__add {
-  width: 150px;
+  width: 140px;
   height: 250px;
   margin: 0 auto;
   padding: 10px;
@@ -981,10 +983,6 @@ form>p {
 
   .product__price {
     min-width: 50px;
-  }
-
-  .product__img {
-    max-width: 50%;
   }
 
   .product__body {
