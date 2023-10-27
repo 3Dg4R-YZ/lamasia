@@ -1,0 +1,49 @@
+header {
+  padding: 5px 40px;
+  border-bottom: 5px solid #126464;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  box-shadow:
+    0px 4px 30px #000,
+    0px 10px 70px #333;
+  background: linear-gradient(var(--main-color), var(--main-color-dk));
+}
+
+header>figure {
+  width: 70px;
+  height: 70px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.instagram {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  border: 2px solid var(--changelg);
+  border-radius: 50%;
+  transition: border .5s, border-radius .5s;
+}
+
+.instagram>svg {
+  fill: var(--changelg);
+  transition: fill .5s;
+}
+
+.instagram:hover {
+  --changelg: #000;
+  border-radius: 20px;
+}
+
+h1 {
+  font-family: 'Lobster Two', serif;
+  font-weight: 400;
+  font-size: 64px;
+  text-shadow: 2px 1px 1px #000;
+  color: #fff;
+}

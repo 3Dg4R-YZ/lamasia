@@ -1,0 +1,47 @@
+.newSection {
+  --bck: #12abd6;
+  width: 90%;
+  margin: 40px auto;
+  cursor: pointer;
+}
+
+.newSection:hover {
+  --bck: #05629c;
+}
+
+.newSection__title,
+.newSection__body {
+  margin: -3px;
+  border: 5px dashed #fff;
+  position: relative;
+  background: var(--bck);
+  color: #fff;
+  font-size: 2.5em;
+  box-shadow: 0px 0px 0px 8px var(--bck);
+  transition: background .4s, box-shadow .4s;
+}
+
+.newSection__title {
+  padding: 10px 50px;
+  border-radius: 20px 20px 0px 0px;
+}
+
+.newSection__body {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.newSection__body>svg,
+.newProduct>svg {
+  width: auto;
+  height: 50%;
+  padding: 5px;
+  stroke: #fff;
+  stroke-width: 12;
+  border: 4px dashed #fff;
+  border-radius: 50%;
+}

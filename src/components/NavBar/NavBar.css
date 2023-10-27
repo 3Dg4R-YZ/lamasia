@@ -1,0 +1,65 @@
+.wrapper {
+  overflow: hidden;
+}
+
+.menu {
+  --hexagon-side: calc(100vw/11);
+  display: grid;
+  grid-template-columns: repeat(11, var(--hexagon-side));
+  grid-template-rows: repeat(4, var(--hexagon-side));
+  animation: move 4s infinite alternate;
+}
+
+.menu__option,
+.menu__separator {
+  position: relative;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  background-color: #000;
+}
+
+.menu__option {
+  --border-size: .25vw;
+  --svg-color: #fff;
+  border-top: var(--border-size) solid #000;
+  border-bottom: var(--border-size) solid #000;
+  display: flex;
+  justify-content: center;
+  left: calc(var(--hexagon-side)/2);
+  align-items: center;
+  grid-area: 2/var(--i)/span 2/span 2;
+  cursor: pointer;
+  transition: background-color .4s;
+}
+
+.menu__option:hover {
+  background-color: aquamarine;
+  --svg-color: #000;
+}
+
+.menu__option.active {
+  background-color: #F2542D;
+  --svg-color: #fff;
+}
+
+.menu__option>svg {
+  width: 50%;
+  height: 50%;
+  fill: var(--svg-color);
+  transition: fill .4s;
+}
+
+.menu__separator {
+  grid-area: var(--j)/var(--i)/span 2/span 2;
+}
+
+.menu__separator::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(26%.5%, 74% .5%, 99% 50%, 74% 99%, 26% 99%, 1% 50%);
+}

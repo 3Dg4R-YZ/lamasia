@@ -1,0 +1,18 @@
+.arrow-up {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+  border: 2px solid var(--changedk);
+  padding: 7px;
+  border-radius: 50%;
+  background-color: #fff;
+  fill: var(--changedk);
+  transition: fill .3s, border .3s;
+}
+
+.arrow-up:hover {
+  --changedk: #13D688;
+}

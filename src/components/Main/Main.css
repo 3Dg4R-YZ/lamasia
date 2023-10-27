@@ -1,0 +1,5 @@
+article {
+  box-shadow: 0px -10px 16px #0005;
+  position: relative;
+  z-index: 1;
+}
